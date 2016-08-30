@@ -1,0 +1,22 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="inheritance-test" transaction-type="RESOURCE_LOCAL">
+        <class>com.ivankoi.domain.ResearchForm</class>
+        <class>com.ivankoi.domain.Party</class>
+        <class>com.ivankoi.domain.Person</class>
+        <class>com.ivankoi.domain.Organisation</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="${jdbc.driver}"/>
+            <property name="javax.persistence.jdbc.user" value="${jdbc.username}"/>
+            <property name="javax.persistence.jdbc.password" value="${jdbc.password}"/>
+            <property name="javax.persistence.jdbc.url" value="${jdbc.url}"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
